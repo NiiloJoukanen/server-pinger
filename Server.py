@@ -30,7 +30,7 @@ def main():
         while True:
             conn, addr = s.accept()  # accept all connections
             connection_interval = int(time.time() - last_connection_time)  # calculate interval from the last connection
-            print(f"Connection from {addr[0]} | Connection interval was {connection_interval} seconds")  # output
+            print(f"Connection from {addr[0]} | Connection interval was {connection_interval} seconds")
             conn.close()  # close connection
             last_connection_time = time.time()  # store connection time
 
