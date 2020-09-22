@@ -9,7 +9,7 @@ def main():
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             try:
                 s.connect((hostname, port))  # connect to server
-                print(f"Connected to {hostname}")  # output
+                print(f"Connected to {hostname}")
                 time.sleep(10)  # wait 10 seconds
             except Exception as e:  # unable to connect to server
                 print(f"Error while connecting to {hostname}")
