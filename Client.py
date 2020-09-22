@@ -2,7 +2,7 @@ import socket
 import time
 
 def main():
-    hostname = "DESKTOP-AS9GGMQ"
+    hostname = "IP HERE"
     port = 1234
 
     while True:
@@ -10,7 +10,7 @@ def main():
             try:
                 s.connect((hostname, port))
                 print(f"Connected to {hostname}")
-                time.sleep(3)
+                time.sleep(10)
             except Exception as e:
                 print(f"Error while connecting to {hostname}")
                 print(e)
