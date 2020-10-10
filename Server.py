@@ -4,16 +4,16 @@ import time
 from datetime import datetime
 
 def connection_timer():
+    max_connection_interval = 60
+    
     while True:
         time.sleep(1)
         current_time = time.time()  # get current time
         last_connection_interval = int(current_time - last_connection_time)  # calculate interval between last connection
         
-        if last_connection_interval >= 60 and last_connection_interval % 60 == 0:
-            # last connection was over a minute ago
+        if last_connection_interval >= max_connection_interval and last_connection_interval % max_connection_interval == 0:
             current_time = datetime.now().strftime("%H:%M:%S")
             print(f"[{current_time}]: Last connection was {last_connection_interval} seconds ago!")
-        
 
 def main():
     global last_connection_time
